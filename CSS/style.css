@@ -12,4 +12,26 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+    background: linear-gradient(to right, #050816, #0F172A);
+    color: #F8FAFC;
+
+    div{
+        width: 45%;
+        p{
+            margin: 15px;
+            font-size: 20px;
+        }
+        h1{
+            margin: 15px;
+            font-size: 60px;
+        }
+        img{
+            height: 600px;
+            border-radius: 30px;
+        }
+    }
+
 }
