@@ -5,7 +5,7 @@
 }
 
 section{
-    height: 100dvh;
+    min-height: 100dvh;
 }
 
 .hero{
@@ -18,8 +18,8 @@ section{
     background: linear-gradient(to right, #050816, #0F172A);
     color: #F8FAFC;
 
-    div{
-        width: 45%;
+    > div{
+        width: 50%;
         p{
             margin: 15px;
             font-size: 20px;
@@ -29,9 +29,56 @@ section{
             font-size: 60px;
         }
         img{
-            height: 600px;
+            max-height: 600px;
+            height: auto;
             border-radius: 30px;
+            transition: 1s;
+            &:hover{
+                scale: 1.1;
+            }
         }
+        
     }
 
 }
+
+.botoes{
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    a{
+        width: 220px;
+        text-decoration: none;
+        padding: 15px 25px;
+        font-size: 14px;
+        font-weight: bold;
+        transition: .3s;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .bt-preto{
+        background: black;
+        color: white;
+        transition: .5s;
+        &:hover{
+            background: #333;
+            scale: 1.1;
+        }
+    }
+    .bt-branco{
+        background: white;
+        color: black;
+        transition: .5s;
+        &:hover{
+            background: #333;
+            color: white;
+            scale: 1.1;
+        }
+    }
+}
+
