@@ -9,6 +9,44 @@ section{
     min-height: 100dvh;
 }
 
+.cards
+{
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    .card-item
+    {
+        box-shadow: 1px 1px 30px #666;
+        width: 20%;
+        min-height: 490px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: top;
+        gap: 40px;
+        border-radius: 8px;
+        text-align: center;
+        transition: .5s;
+
+        img
+        {
+            height: 25dvh;
+            width: 100%;
+        }
+
+        h3
+        {
+            font-size: 2rem;
+        }
+    }
+}
+
 .hero{
     display: flex;
     align-items: center;
