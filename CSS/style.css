@@ -65,6 +65,7 @@ html
     background: linear-gradient(to right, var(--color-dark-blue), var(--color-blue));
     font-family: "Montserrat", sans-serif;
     color: var(--color-white);
+    scroll-behavior: smooth;
 }
 
 .hero{
@@ -123,6 +124,7 @@ html
 
     .bt-preto{
         background-color: var(--color-black);
+        color: var(--color-white);
 
         &:hover{
             background-color: var(--color-gray);
