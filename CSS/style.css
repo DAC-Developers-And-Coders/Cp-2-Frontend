@@ -1,123 +1,234 @@
+:root
+{
+    --color-black: lch(2.74% 0 296.81);
+    --color-gray:  lch(8.73% 1.57 272.17);
+    --color-gray-md: lch(36.09% 5.78 274.84);
+    --color-light-gray: lch(70.06% 0.38 18.14);
+    --color-white: lch(98.18% 1.23 255.97);
+    
+    --color-dark-blue: lch(2.38% 7.47 283.79);
+    --color-blue: lch(7.96% 14.45 283.28);
+    --color-light-blue: lch(58.54% 67.84 291.86);
+
+    --margin-spacing-section2: 10dvh;
+    --margin-spacing-section1: 40px;
+
+    --padding-general: 2dvh;
+    --padding-hero: 15dvh;
+
+    --full-width: 100%;
+    --half-width: 50%;
+    --width-90: 90%;
+    --width-20: 20%;
+
+    --btn-width: 220px;
+    --width-h1: 800px;
+
+    --card-image-height: 25dvh;
+    --hero-image-height: 600px;
+    --card-item-height: 490px;
+    --section-height: 100dvh;
+
+    --line-height-h1: 1.1;
+    --line-height: 1.5;
+
+    --def-scale: 1.1;
+}
+
 *{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;  
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
 }
 
 section{
-    width: 100%;
-    min-height: 100dvh;
+    width: var(--full-width);
+    min-height: var(--section-height);
+    border-bottom: 1px solid var(--color-gray);
 }
 
-.cards
+html
 {
-    width: 100%;
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 10px;
-    flex-wrap: wrap;
-
-    .card-item
-    {
-        box-shadow: 1px 1px 30px #666;
-        width: 20%;
-        min-height: 490px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: top;
-        gap: 40px;
-        border-radius: 8px;
-        text-align: center;
-        transition: .5s;
-
-        img
-        {
-            height: 25dvh;
-            width: 100%;
-        }
-
-        h3
-        {
-            font-size: 2rem;
-        }
-    }
+    background: linear-gradient(to right, var(--color-dark-blue), var(--color-blue));
+    font-family: "Montserrat", sans-serif;
+    color: var(--color-white);
 }
 
 .hero{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-align: center;
-    padding: 20px;
-    gap: 20px;
-    background: linear-gradient(to right, #050816, #0F172A);
-    color: #F8FAFC;
+    padding: var(--padding-hero);
 
-    > div{
-        width: 50%;
+    div{
+        width: var(--half-width);
         p{
-            margin: 15px;
             font-size: 20px;
         }
+
         h1{
-            margin: 15px;
+            text-wrap: balance;
             font-size: 60px;
+            max-width: var(--width-h1);
+            line-height: var(--line-height-h1);
+            margin-block: var(--margin-spacing-section1);
         }
-        img{
-            max-height: 600px;
-            height: auto;
-            border-radius: 30px;
-            transition: 1s;
-            &:hover{
-                scale: 1.1;
-            }
-        }
-        
     }
 
+    img{
+        max-height: var(--hero-image-height);
+        border-radius: 30px;
+        transition: 1s;
+        
+        &:hover{
+            scale: var(--def-scale);
+        }
+    }
 }
 
 .botoes{
     display: flex;
     gap: 25px;
-    margin-top: 20px;
+    margin-top: var(--margin-spacing-section1);
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: var(--full-width);
 
     a{
-        width: 220px;
+        width: var(--btn-width);
         text-decoration: none;
-        padding: 15px 25px;
+        padding: var(--padding-general);
         font-size: 14px;
         font-weight: bold;
-        transition: .3s;
         text-align: center;
         border-radius: 10px;
         cursor: pointer;
-    }
-    .bt-preto{
-        background: black;
-        color: white;
         transition: .5s;
+    }
+
+    .bt-preto{
+        background-color: var(--color-black);
+
         &:hover{
-            background: #333;
-            scale: 1.1;
+            background-color: var(--color-gray);
+            scale: var(--def-scale);
         }
     }
+
     .bt-branco{
-        background: white;
-        color: black;
-        transition: .5s;
+        background-color: var(--color-white);
+        color: var(--color-black);
+
         &:hover{
-            background: #333;
-            color: white;
-            scale: 1.1;
+            background-color: var(--color-gray);
+            color: var(--color-white);
+            scale: var(--def-scale);
         }
     }
 }
 
+.cards-section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    .cards-text
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        margin-bottom: var(--margin-spacing-section2);
+
+        p
+        {
+            font-size: 20px;
+        }
+
+        h2
+        {
+            font-size: 35px
+        }
+    }
+    
+    .cards
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+
+        .card-item
+        {
+            background: linear-gradient(to right, var(--color-light-gray), var(--color-gray-md));
+            color: var(--color-black);
+            box-shadow: 1px 1px 30px var(--color-light-blue);
+            width: var(--width-20);
+            min-height: var(--card-item-height);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 40px;
+            border-radius: 8px;
+            text-align: center;
+
+            transition: .5s;
+
+            img
+            {
+                height: var(--card-image-height);
+                width: var(--full-width);
+
+                border-radius: 8px 8px 0 0;
+            }
+
+            h3
+            {
+                font-size: 25px;
+            }
+
+            p
+            {
+                text-wrap: balance;
+                line-height: var(--line-height);
+                width: var(--width-90);
+
+                font-size: 18px;
+            }
+
+            &:hover
+            {
+                scale: var(--def-scale);
+            }
+
+            animation: animationView both;
+            animation-timeline: view(90% 1%);
+        }
+    }
+}
+
+footer
+{
+    font-size: 20px;
+    text-align: center;
+    padding-block: var(--padding-general);
+    background: linear-gradient(to right, var(--color-black), var(--color-gray));
+}
+
+@keyframes animationView
+{
+    from
+    {
+        opacity: 0;
+        transform: scale(.5);
+    }
+
+    to
+    {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
