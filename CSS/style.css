@@ -227,7 +227,7 @@ html
     }
 }
 
-.ia-section
+.third-section
 {
     background: linear-gradient(135deg, var(--color-white), var(--color-aqua-blue), var(--color-strong-blue));
     display: flex;
@@ -237,7 +237,7 @@ html
     color: var(--color-gray-md);
     font-size: 24px;
 
-    .ia-text
+    .third-section-text
     {
         width: var(--half-width);
         gap: 20px;
