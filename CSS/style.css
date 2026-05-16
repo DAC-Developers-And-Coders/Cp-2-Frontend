@@ -41,6 +41,10 @@
     box-sizing: border-box;  
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 section{
     width: var(--full-width);
     min-height: var(--section-height);
