@@ -4,6 +4,10 @@
   box-sizing: border-box;  
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 section{
     width: 100%;
     min-height: 100dvh;
@@ -56,6 +60,7 @@ section{
     gap: 20px;
     background: linear-gradient(to right, #050816, #0F172A);
     color: #F8FAFC;
+    background-attachment: fixed;
 
     > div{
         width: 50%;
